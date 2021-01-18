@@ -1,0 +1,27 @@
+
+@import '../../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+
+  nb-icon {
+    color: nb-theme(color-warning-300);
+    font-size: 25px;
+  }
+
+  .technology-section {
+    padding: 1em 0;
+  }
+
+  img{
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+  .technology-section {
+    border-bottom: 1px solid nb-theme(background-basic-color-1);
+  }
+  .lightMode .technology-section {
+    border-color: nb-theme(color-background-basic-1) !important;
+  }
+
+}

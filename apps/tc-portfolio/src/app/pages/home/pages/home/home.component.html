@@ -1,0 +1,137 @@
+<div class="home-svg-background">
+  <portfolio-my-light-profil style="height:100%"></portfolio-my-light-profil>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" width="100%" height="15vh" preserveAspectRatio="none">
+  <path
+    d="M0,224L48,224C96,224,192,224,288,240C384,256,480,288,576,282.7C672,277,768,235,864,229.3C960,224,1056,256,1152,256C1248,256,1344,224,1392,208L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+  </path>
+</svg>
+<div class="home-section">
+  <portfolio-main-title title="Projet Réalisés"></portfolio-main-title>
+  <div class="row home-section-content">
+    <div class="col-md-4 col-xs-12" *ngFor="let project of projectsList">
+      <portfolio-projects [imageName]="project.imageName" [desc]="project.desc"></portfolio-projects>
+    </div>
+  </div>
+</div>
+<div class="primary-background home-section">
+  <portfolio-main-title title="Technologies" [lightMode]="true"></portfolio-main-title>
+  <div class="home-section-content">
+    <portfolio-technology *ngFor="let technology of technologiesList" [numberStars]="technology.numberStars"
+      [imagesName]="technology.imagesName" [lightMode]="true"></portfolio-technology>
+  </div>
+</div>
+<div class="home-section">
+  <portfolio-main-title title="Mes informations"></portfolio-main-title>
+  <div class="home-section-content">
+    <portfolio-my-infos></portfolio-my-infos>
+  </div>
+</div>
+
+<!--
+<div class="circle circle-1" [portfolioParallax]="0.3"></div>
+<div class="circle circle-2" [portfolioParallax]="0.1"></div>
+<div class="circle circle-3" [portfolioParallax]="0.2"></div> -->
+
+<!-- <svg class="background-svg"  [portfolioParallax]="0.2" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1080 900'>
+  <rect fill='#00b7ff' width='1080' height='900' />
+  <g fill-opacity='.1'>
+    <polygon fill='#444' points='90 150 0 300 180 300' />
+    <polygon points='90 150 180 0 0 0' />
+    <polygon fill='#AAA' points='270 150 360 0 180 0' />
+    <polygon fill='#DDD' points='450 150 360 300 540 300' />
+    <polygon fill='#999' points='450 150 540 0 360 0' />
+    <polygon points='630 150 540 300 720 300' />
+    <polygon fill='#DDD' points='630 150 720 0 540 0' />
+    <polygon fill='#444' points='810 150 720 300 900 300' />
+    <polygon fill='#FFF' points='810 150 900 0 720 0' />
+    <polygon fill='#DDD' points='990 150 900 300 1080 300' />
+    <polygon fill='#444' points='990 150 1080 0 900 0' />
+    <polygon fill='#DDD' points='90 450 0 600 180 600' />
+    <polygon points='90 450 180 300 0 300' />
+    <polygon fill='#666' points='270 450 180 600 360 600' />
+    <polygon fill='#AAA' points='270 450 360 300 180 300' />
+    <polygon fill='#DDD' points='450 450 360 600 540 600' />
+    <polygon fill='#999' points='450 450 540 300 360 300' />
+    <polygon fill='#999' points='630 450 540 600 720 600' />
+    <polygon fill='#FFF' points='630 450 720 300 540 300' />
+    <polygon points='810 450 720 600 900 600' />
+    <polygon fill='#DDD' points='810 450 900 300 720 300' />
+    <polygon fill='#AAA' points='990 450 900 600 1080 600' />
+    <polygon fill='#444' points='990 450 1080 300 900 300' />
+    <polygon fill='#222' points='90 750 0 900 180 900' />
+    <polygon points='270 750 180 900 360 900' />
+    <polygon fill='#DDD' points='270 750 360 600 180 600' />
+    <polygon points='450 750 540 600 360 600' />
+    <polygon points='630 750 540 900 720 900' />
+    <polygon fill='#444' points='630 750 720 600 540 600' />
+    <polygon fill='#AAA' points='810 750 720 900 900 900' />
+    <polygon fill='#666' points='810 750 900 600 720 600' />
+    <polygon fill='#999' points='990 750 900 900 1080 900' />
+    <polygon fill='#999' points='180 0 90 150 270 150' />
+    <polygon fill='#444' points='360 0 270 150 450 150' />
+    <polygon fill='#FFF' points='540 0 450 150 630 150' />
+    <polygon points='900 0 810 150 990 150' />
+    <polygon fill='#222' points='0 300 -90 450 90 450' />
+    <polygon fill='#FFF' points='0 300 90 150 -90 150' />
+    <polygon fill='#FFF' points='180 300 90 450 270 450' />
+    <polygon fill='#666' points='180 300 270 150 90 150' />
+    <polygon fill='#222' points='360 300 270 450 450 450' />
+    <polygon fill='#FFF' points='360 300 450 150 270 150' />
+    <polygon fill='#444' points='540 300 450 450 630 450' />
+    <polygon fill='#222' points='540 300 630 150 450 150' />
+    <polygon fill='#AAA' points='720 300 630 450 810 450' />
+    <polygon fill='#666' points='720 300 810 150 630 150' />
+    <polygon fill='#FFF' points='900 300 810 450 990 450' />
+    <polygon fill='#999' points='900 300 990 150 810 150' />
+    <polygon points='0 600 -90 750 90 750' />
+    <polygon fill='#666' points='0 600 90 450 -90 450' />
+    <polygon fill='#AAA' points='180 600 90 750 270 750' />
+    <polygon fill='#444' points='180 600 270 450 90 450' />
+    <polygon fill='#444' points='360 600 270 750 450 750' />
+    <polygon fill='#999' points='360 600 450 450 270 450' />
+    <polygon fill='#666' points='540 600 630 450 450 450' />
+    <polygon fill='#222' points='720 600 630 750 810 750' />
+    <polygon fill='#FFF' points='900 600 810 750 990 750' />
+    <polygon fill='#222' points='900 600 990 450 810 450' />
+    <polygon fill='#DDD' points='0 900 90 750 -90 750' />
+    <polygon fill='#444' points='180 900 270 750 90 750' />
+    <polygon fill='#FFF' points='360 900 450 750 270 750' />
+    <polygon fill='#AAA' points='540 900 630 750 450 750' />
+    <polygon fill='#FFF' points='720 900 810 750 630 750' />
+    <polygon fill='#222' points='900 900 990 750 810 750' />
+    <polygon fill='#222' points='1080 300 990 450 1170 450' />
+    <polygon fill='#FFF' points='1080 300 1170 150 990 150' />
+    <polygon points='1080 600 990 750 1170 750' />
+    <polygon fill='#666' points='1080 600 1170 450 990 450' />
+    <polygon fill='#DDD' points='1080 900 1170 750 990 750' />
+  </g>
+</svg>
+ -->
+<svg class="background-svg"  [portfolioParallax]="0.1" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'>
+  <rect fill='#ffffff' width='1600' height='900' />
+  <defs>
+    <linearGradient id='a' x1='0' x2='0' y1='1' y2='0'>
+      <stop offset='0' stop-color='#0FF' />
+      <stop offset='1' stop-color='#CF6' />
+    </linearGradient>
+    <linearGradient id='b' x1='0' x2='0' y1='0' y2='1'>
+      <stop offset='0' stop-color='#F00' />
+      <stop offset='1' stop-color='#FC0' />
+    </linearGradient>
+  </defs>
+  <g fill='#FFF' fill-opacity='0' stroke-miterlimit='10'>
+    <g stroke='url(#a)' stroke-width='2'>
+      <path transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z' />
+      <circle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40' />
+      <path transform='translate(0 0)'
+        d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z' />
+    </g>
+    <g stroke='url(#b)' stroke-width='4'>
+      <path transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z' />
+      <rect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100' />
+      <path transform='rotate(0 1400 132)'
+        d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z' />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+@import '../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+
+  .main-title {
+    padding-bottom: 1em;
+  }
+
+  h1 {
+    margin: 0.5em;
+    text-transform: uppercase;
+  }
+
+  .icon-star-title {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-size: 20px;
+    width: 20%;
+  }
+  .icon-star-title nb-icon {
+    position: relative;
+  }
+  .icon-star-title nb-icon::before,
+  .icon-star-title nb-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    /* Here is the modification */
+    border-top: 1px solid nb-theme(text-basic-color);
+  }
+  .icon-star-title nb-icon::before {
+    right: 100%;
+    margin-right: 10px;
+  }
+  .icon-star-title nb-icon::after {
+    left: 100%;
+    margin-left: 10px;
+  }
+
+  .lightMode {
+    .icon-star-title nb-icon::before,
+    .icon-star-title nb-icon::after {
+      border-color: nb-theme(header-text-color);
+    }
+    h1, nb-icon, p {
+      color: nb-theme(header-text-color);
+    }
+  }
+}

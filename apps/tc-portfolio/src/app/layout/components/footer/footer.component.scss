@@ -1,0 +1,51 @@
+@import '../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+
+  .row {
+    margin: 0;
+  }
+
+  #footer {
+    background-color: nb-theme(color-primary-900);
+    color: nb-theme(header-text-color);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    min-height: 110px;
+  }
+
+  #footer * {
+    color: nb-theme(color-basic-300);
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .menu-section {
+    height: 100%;
+    padding-bottom: 1em;
+  }
+
+  .creds {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .menu-list li {
+    outline: none !important;
+    cursor: pointer;
+  }
+  .menu-list li:hover {
+    color: nb-theme(color-primary-300) !important;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding-left: 5px;
+  }
+}

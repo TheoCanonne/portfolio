@@ -1,0 +1,35 @@
+@import '../../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+
+  nb-card {
+    margin-bottom: 0px;
+    height: 100%;
+    min-height: 50px;
+    background-color: nb-theme(color-primary-500);
+    border: none;
+    box-shadow: nb-theme(shadow);
+  }
+
+  span, nb-icon{
+    color: nb-theme(header-text-color);
+  }
+  button:not(:hover) {
+    background-color: nb-theme(color-primary-600) !important;
+  }
+  button:hover {
+    background-color: nb-theme(color-primary-400) !important;
+  }
+}
+
+nb-icon {
+  font-size: 30px;
+}
+
+.info-part {
+  margin-bottom: 1em;
+}
+
+button {
+  width: 200px;
+}

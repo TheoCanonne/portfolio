@@ -1,0 +1,29 @@
+@import '../../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+  #profil-picture {
+    border-radius: 50%;
+    width: 50%;
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  #my-light-profil {
+    height: 100%;
+  }
+
+  .personnal-description-section {
+    width: 80%;
+    * {
+      color: nb-theme(header-text-color);
+    }
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      word-break: break-word;
+      font-size: 1.1em;
+    }
+  }
+}

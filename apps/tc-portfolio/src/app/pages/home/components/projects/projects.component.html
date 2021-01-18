@@ -1,0 +1,10 @@
+<nb-card>
+  <nb-card-body class="d-flex flex-column justify-content-center align-items-center">
+    <div class="mid-div">
+      <img [src]="'../../../../assets/images/' + imageName" *ngIf="imageName">
+    </div>
+    <div class="mid-div">
+      <p class="project-desc">{{desc}}</p>
+    </div>
+  </nb-card-body>
+</nb-card>

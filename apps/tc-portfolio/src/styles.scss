@@ -1,0 +1,12 @@
+@import '~bootstrap/scss/bootstrap';
+@import '../../../libs/theme/src/lib/theme';
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

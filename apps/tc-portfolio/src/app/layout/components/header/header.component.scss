@@ -1,0 +1,20 @@
+@import '../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+  h3 {
+    color: nb-theme(header-text-color);
+  }
+
+  button.appearance-ghost {
+    color: nb-theme(header-text-color);
+  }
+  button.appearance-ghost:hover, button.appearance-ghost:focus {
+    color: nb-theme(color-primary-300);
+  }
+  button.active-button {
+    color: nb-theme(color-primary-200);
+  }
+}
+#header {
+  width: 100%;
+}

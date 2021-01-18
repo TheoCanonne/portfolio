@@ -1,0 +1,8 @@
+@import '../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+
+  span {
+    color: nb-theme(color-primary-900);
+  }
+}
