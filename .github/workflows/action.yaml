@@ -20,7 +20,7 @@ jobs:
         run: npm install
       - name: Run Affected Tests
         shell: bash
-        steps:
-          - run: npm run affected:=test --all
-          - run: npm run affected:=lint --all
-          - run: npm run affected:=build --all --prod
+        run: |
+           npm run affected:=test --all
+           npm run affected:=lint --all
+           npm run affected:=build --all --prod
