@@ -1,0 +1,27 @@
+name: Nx Affected Test Release
+
+on:
+  push:
+    branches: [main]
+
+env:
+  BEFORE_SHA: ${{ github.event.before }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: git fetch origin main
+      - name: npm install
+        run: npm install
+      - name: Run Affected Test-Release
+        shell: bash
+        run: npm run affected:test-release -- --base=$BEFORE_SHA
