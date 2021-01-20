@@ -24,3 +24,4 @@ jobs:
            npm run affected:test  -- --all --base=remotes/origin/main
            npm run affected:lint  -- --all --base=remotes/origin/main
            npm run affected:build -- --all --prod --base=remotes/origin/main
+           ls
