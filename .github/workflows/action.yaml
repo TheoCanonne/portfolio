@@ -20,4 +20,4 @@ jobs:
         run: npm install
       - name: Run Affected Tests
         shell: bash
-        run: npm run affected:test -- --base=remotes/origin/mai
+        run: npm run affected:test -- --base=remotes/origin/main
