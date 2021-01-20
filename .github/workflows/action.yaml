@@ -20,7 +20,6 @@ jobs:
         run: npm install
       - name: Run Affected Tests
         shell: bash
-        - run: npm run affected:test -- --base=remotes/origin/main
-        - run: yarn nx run-many --target=test --all
-        - run: yarn nx run-many --target=lint --all
-        - run: yarn nx run-many --target=build --all --prod
+        - run: npm run affected:=test --all
+        - run: npm run affected:=lint --all
+        - run: npm run affected:=build --all --prod
