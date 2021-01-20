@@ -1,9 +1,14 @@
 {
   "npmScope": "portfolio",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -14,19 +19,43 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "OTUyMDRiOWUtNGM0NS00M2U0LThmNWItM2JiNTM1ZDlmZTU2fHJlYWQtd3JpdGU=",
-        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
   "projects": {
-    "tc-portfolio": { "tags": [] },
+    "tc-portfolio": {
+      "architect": {
+        "test-release": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "npm run test:release:my-app"
+              }
+            ]
+          }
+        }
+      }
+    },
     "tc-portfolio-e2e": {
       "tags": [],
-      "implicitDependencies": ["tc-portfolio"]
+      "implicitDependencies": [
+        "tc-portfolio"
+      ]
     },
-    "theme": { "tags": [] },
-    "utils-services": { "tags": [] }
+    "theme": {
+      "tags": []
+    },
+    "utils-services": {
+      "tags": []
+    }
   }
 }
