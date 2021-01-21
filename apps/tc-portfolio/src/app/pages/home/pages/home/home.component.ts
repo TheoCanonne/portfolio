@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  projectsList: { imageName?: string; desc: string; }[] = [
-    { imageName: 'raliraid-logo.png', desc: 'Site pour une association participant au 4L Trophy.' },
-    { imageName: 'emothep-logo.png', desc: 'Site d\'une entreprise de services informatiques.' }
+  projectsList: { imageName?: string; desc: string; link: string }[] = [
+    { imageName: 'raliraid-logo.png', desc: 'Site pour une association participant au 4L Trophy.' , link: 'http://raliraid.com/'},
+    { imageName: 'emothep-logo.png', desc: 'Site d\'une entreprise de services informatiques.', link: 'https://e-mothep.fr/' }
   ];
 
   technologiesList: { imagesName?: string[]; numberStars: number; }[] = [

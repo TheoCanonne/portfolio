@@ -6,3 +6,9 @@
     color: nb-theme(color-primary-900);
   }
 }
+
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

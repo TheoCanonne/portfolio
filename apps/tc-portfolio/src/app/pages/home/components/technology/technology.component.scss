@@ -15,13 +15,14 @@
   img{
     max-height: 100px;
     max-width: 100px;
+    height: 80%;
   }
 
   .technology-section {
     border-bottom: 1px solid nb-theme(background-basic-color-1);
   }
   .lightMode .technology-section {
-    border-color: nb-theme(color-background-basic-1) !important;
+    border-color: nb-theme(background-basic-color-1) !important;
   }
 
 }

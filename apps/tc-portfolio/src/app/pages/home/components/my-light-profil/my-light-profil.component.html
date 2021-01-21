@@ -10,10 +10,10 @@
         Je suis à la recherche d'un emploi dans le developpement web fullstack Angular et NodeJS.
       </p>
       <div class="col-md-6 col-xs-12">
-        <button nbButton ghost size="giant">
+        <button nbButton ghost size="giant" (click)='socialMediasService.openGithubLink()'>
           <nb-icon icon="github-outline"></nb-icon>
         </button>
-        <button nbButton ghost size="giant">
+        <button nbButton ghost size="giant" (click)='socialMediasService.openLinkedinLink()'>
           <nb-icon icon="linkedin-outline"></nb-icon>
         </button>
       </div>

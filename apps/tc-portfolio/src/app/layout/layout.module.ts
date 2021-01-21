@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbLayoutModule } from '@nebular/theme';
+import { NbLayoutModule, NbSidebarModule } from '@nebular/theme';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from './components/header/header.component';
 import { LayoutComponent } from './layouts/layout/layout.component';
@@ -13,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SharedModule,
     NbLayoutModule,
     LayoutModule,
-    RouterModule
+    RouterModule,
+    NbSidebarModule
   ],
   exports: [LayoutComponent]
 })

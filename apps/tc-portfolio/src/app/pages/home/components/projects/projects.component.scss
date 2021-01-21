@@ -8,6 +8,11 @@
     background-color: nb-theme(color-primary-500);
     border: none;
     box-shadow: 0em 0.5rem 1rem 0 nb-theme(color-basic-600);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  nb-card:hover {
+    background-color: nb-theme(color-primary-400);
   }
 
   p{

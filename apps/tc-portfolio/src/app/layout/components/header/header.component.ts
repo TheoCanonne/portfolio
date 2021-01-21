@@ -1,8 +1,7 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { SubscriptionManager } from '@portfolio/utils-services';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BreakpointsService } from '../../../core/services/breakpoints.service';
 
 @Component({
   selector: 'portfolio-header',
@@ -14,14 +13,12 @@ export class HeaderComponent extends SubscriptionManager implements OnInit {
   needMenu$: Observable<boolean>;
 
   constructor(
-    private breakpointObserver: BreakpointObserver,
+    public breakpointsService: BreakpointsService,
   ) {
     super();
   }
 
   ngOnInit() {
-    this.needMenu$ = this.breakpointObserver.observe('(max-width: 610px)').pipe(
-      map((e) => e.matches)
-    )
+    this.needMenu$ = this.breakpointsService.getBreakpointHeader();
   }
 }

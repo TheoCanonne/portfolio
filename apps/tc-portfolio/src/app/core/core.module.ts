@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { NbThemeModule } from '@nebular/theme';
-
-
+import { NbMenuModule, NbSidebarModule, NbThemeModule } from '@nebular/theme';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    NbThemeModule.forRoot({ name: 'custom' })
+    NbThemeModule.forRoot({ name: 'custom' }),
+    NbSidebarModule.forRoot(),
+    NbMenuModule.forRoot(),
+    BrowserAnimationsModule
   ],
   exports: []
 })

@@ -7,11 +7,12 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      { path: '', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) },
-      { path: '**', redirectTo: '' },
+      { path: 'accueil', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) },
+      { path: 'a-propos', loadChildren: () => import('./resume/resume.module').then((m) => m.ResumeModule) },
+      { path: 'contact', loadChildren: () => import('./contact/contact.module').then((m) => m.ContactModule) },
+      { path: '**', redirectTo: 'accueil' },
     ]
-  },
-  { path: '**', redirectTo: '' },
+  }
 ];
 
 @NgModule({

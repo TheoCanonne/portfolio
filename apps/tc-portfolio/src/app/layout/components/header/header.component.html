@@ -4,15 +4,15 @@
     <button nbButton ghost  routerLink="/" routerLinkActive="active-button">
       Accueil
     </button>
-    <button nbButton ghost>
+    <button nbButton ghost routerLink="/a-propos" routerLinkActive="active-button">
       A propos
     </button>
-    <button nbButton ghost>
+    <button nbButton ghost routerLink="/contact" routerLinkActive="active-button">
       Contact
     </button>
   </div>
   <div *ngIf="needMenu$ | async">
-    <button nbButton ghost size="giant">
+    <button nbButton ghost size="giant" (click)='breakpointsService.toggleSidebar()'>
       <nb-icon icon="menu-outline" ></nb-icon>
     </button>
   </div>

@@ -10,3 +10,9 @@ button:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+@media (max-width: 768px) {
+  .mobile-margin-col {
+    margin-bottom: 20px;
+  }
+}

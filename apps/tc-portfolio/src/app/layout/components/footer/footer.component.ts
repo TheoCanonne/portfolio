@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialMediasService } from '../../../core/services/social-medias.service';
 
 @Component({
   selector: 'portfolio-footer',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
+  constructor(public socialMediasService: SocialMediasService) {}
+
 }
