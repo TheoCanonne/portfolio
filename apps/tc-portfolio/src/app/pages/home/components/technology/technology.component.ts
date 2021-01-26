@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TechnologyComponent implements OnInit {
   @Input() numberStars: number;
-  @Input() imagesName: string[];
+  @Input() images: {path:string, title: string}[];
   @Input() lightMode: boolean;
 
   arrayStars: number[];

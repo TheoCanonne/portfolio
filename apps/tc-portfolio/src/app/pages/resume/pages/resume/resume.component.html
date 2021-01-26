@@ -1,1 +1,144 @@
-<p>resume works!</p>
+<portfolio-main-title title="Mes experiences"></portfolio-main-title>
+
+<div class="row-animation row">
+  <div class="col-lg-6 col-xs-12 smallScreen-margin-col">
+    <portfolio-card-resume date="avril 2019 - présent" title="Developpeur Angular et NodeJS" status="primary"
+      location="E-Mothep Consultant, Villeneuve d'Ascq">
+      <ul>
+        <li class="pb-3">
+          Développement d'applications Web et d'API pour répondre aux besoins internes de l'entreprise :
+          <ul class="pt-1">
+            <li class="pb-1">Outil de planification de tâches (similaire à Jira)</li>
+            <li class="pb-1">Génération de factures automatiques</li>
+            <li>Création d'ICP pour la suivie des projets</li>
+          </ul>
+        </li>
+        <li class="pb-3">
+          Développement d'applications Web pour les clients :
+          <ul class="pt-1">
+            <li class="pb-1">
+              Thomas & Piron, une entreprise majeure dans le batiment en Belgique :
+              Création d'une application PWA pour la gestion des chantiers de l'entreprise
+            </li>
+            <li>
+              Al Barik Bank , une banque nationale au Maroc:
+              Développpement d'un processus pour la gestion des réclamations clients
+            </li>
+          </ul>
+        </li>
+        <li>
+          Formation Angular à des employés de l'entreprise.
+        </li>
+      </ul>
+    </portfolio-card-resume>
+  </div>
+  <div class="col-lg-6 col-xs-12 d-flex flex-column justify-content-between ">
+    <portfolio-card-resume date="fev. 2020 - présent" title="Création d'un site Wordpress" status="primary"
+      location="RaliRaid, Marcq-En-Baroeul" class="smallScreen-margin-col">
+      <ul>
+        <li class="pb-1">
+          Création d'un site à une association participant au 4L Trophy.
+        </li>
+        <li>
+          Gestion de leur serveur OVH et de leur compte mail.
+        </li>
+      </ul>
+      <div class="d-flex justify-content-end">
+        <button nbButton status="primary" (click)="socialMediasService.openLink('http://raliraid.com')">
+          Consulter
+        </button>
+      </div>
+    </portfolio-card-resume>
+    <portfolio-card-resume date="oct. 2017 - avr. 2019" title="Préparateur de commande" status="primary"
+      location="Lidl France, La Chapelle d'Armentière" class="smallScreen-margin-col">
+      <ul>
+        <li>
+          CDI étudiant en supplément des cours.
+        </li>
+      </ul>
+    </portfolio-card-resume>
+  </div>
+</div>
+<div class="primary-background info-part">
+  <portfolio-main-title title="Mes formations" [lightMode]="true"></portfolio-main-title>
+  <swiper [config]="config" [(index)]="index">
+    <div>
+      <portfolio-card-resume [lightMode]="true" [size]="(smallScreen$ | async) ? 'small' : 'tiny'" date="sep. 2019 - aout. 2020"
+        title="Licence professionnelle DA2I" status="primary" location="IUT A Lille 1, Villeneuve d'Ascq">
+        <ul>
+          <li class="pb-2">
+            Développement Web ( J2EE, Javascript )
+          </li>
+          <li class="pb-2">
+            Développement d'API ( JAVA - Rest )
+          </li>
+          <li class="pb-2">
+            Administration de systèmes ( Debian, Docker, Bash )
+          </li>
+        </ul>
+      </portfolio-card-resume>
+    </div>
+    <div>
+      <portfolio-card-resume [lightMode]="true" [size]="(smallScreen$ | async) ? 'small' : 'tiny'" date="sep. 2017 - aout. 2019"
+        title="DUT Informatique" status="primary" location="IUT A Lille 1, Villeneuve d'Ascq">
+        <ul>
+          <li class="pb-2">
+            Programation Orienté Objet ( POO )
+          </li>
+          <li class="pb-2">
+            Algorithmie basique et avancé
+          </li>
+          <li class="pb-2">
+            Spécialisation Réseau
+          </li>
+        </ul>
+      </portfolio-card-resume>
+    </div>
+    <div>
+      <portfolio-card-resume [lightMode]="true" [size]="(smallScreen$ | async) ? 'small' : 'tiny'" date="sep. 2014 - juil. 2017"
+        title="Baccalauréat scientifique" status="primary" location="Lycée Fernand Darchicout, Hénin-Beaumont">
+        <ul>
+          <li class="pb-1">
+            Spécialité Mathématique
+          </li>
+        </ul>
+      </portfolio-card-resume>
+    </div>
+  </swiper>
+</div>
+<div class="row-animation" [class.card-row]="!(smallScreen$ | async)">
+  <div [class.card-col]="!(smallScreen$ | async)" class="d-flex flex-column justify-content-start align-items-center">
+    <portfolio-main-title title="Savoir faire"></portfolio-main-title>
+    <ul>
+      <li>Compréhesion du besoin</li>
+      <li>Travail d'équipe</li>
+      <li>Curiosité</li>
+      <li>Patience et prise de recul</li>
+      <li>Fort de proposition</li>
+    </ul>
+  </div>
+  <div [class.card-col]="!(smallScreen$ | async)" class="d-flex flex-column justify-content-start align-items-center">
+    <portfolio-main-title title="Savoir être"></portfolio-main-title>
+    <div>
+      <h6>Très bonne maîtrise</h6>
+      <ul>
+        <li>Angular - Architecture modulaire - PWA</li>
+        <li>NodeJS - Loopback - TSOA - Express</li>
+        <li>Git</li>
+      </ul>
+      <h6>Bonne maîtrise</h6>
+      <ul>
+        <li>Firebase - NoSql - WebSocket</li>
+        <li>Intégration Continue - Github Action - Jenkins</li>
+        <li>Administration de serveur - Linux - Certificats SSL - Nginx - Cloud</li>
+      </ul>
+      <h6>Connaissances</h6>
+      <ul>
+        <li>WebMethods - Architecture Orienté Service (SOA)</li>
+        <li>SQL - Postgresql</li>
+        <li>Electron - Cordova</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+  </div>
+</div>

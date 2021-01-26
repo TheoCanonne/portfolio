@@ -1,5 +1,6 @@
 
 import { Component } from '@angular/core';
+import { BreakpointsService } from '../core/services/breakpoints.service';
 import { MENU_ITEMS } from './pages-menu';
 
 
@@ -9,10 +10,12 @@ import { MENU_ITEMS } from './pages-menu';
   template: `
     <portfolio-layout>
         <router-outlet></router-outlet>
-        <nb-menu [items]="menu"></nb-menu>
+        <nb-menu (click)="breakpointsService.toggleSidebar()" [items]="menu"></nb-menu>
     </portfolio-layout>
   `,
 })
 export class PagesComponent {
   public menu = MENU_ITEMS;
+
+  constructor(public breakpointsService: BreakpointsService) { }
 }

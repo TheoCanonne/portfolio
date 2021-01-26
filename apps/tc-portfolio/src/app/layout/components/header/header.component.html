@@ -1,7 +1,7 @@
 <div id="header" class="d-flex flex-row justify-content-between align-items-center">
-  <h3>Developpeur Web</h3>
+  <h3 routerLink="/">Developpeur Web</h3>
   <div *ngIf="!(needMenu$ | async)">
-    <button nbButton ghost  routerLink="/" routerLinkActive="active-button">
+    <button nbButton ghost routerLink="/accueil" routerLinkActive="active-button">
       Accueil
     </button>
     <button nbButton ghost routerLink="/a-propos" routerLinkActive="active-button">

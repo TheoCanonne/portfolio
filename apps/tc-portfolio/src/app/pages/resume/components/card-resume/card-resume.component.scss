@@ -1,0 +1,37 @@
+@import '../../../../../../../../libs/theme/src/lib/theme';
+
+@include nb-install-component {
+  nb-card {
+    box-shadow: nb-theme(shadow);
+    margin-bottom: 0px;
+  }
+
+  nb-card.lightMode {
+    border: none;
+    box-shadow: 0 0.5rem 1rem 0 nb-theme(color-primary-400);
+  }
+
+  .lightMode {
+    nb-card-header {
+      background-color: nb-theme(color-primary-600);
+    }
+  }
+
+  nb-card-body {
+    background-color: nb-theme(background-basic-color-2);
+  }
+  .resume-place {
+    color: nb-theme(color-warning-600);
+    font-weight: 500;
+    padding-top: 0.5em;
+    margin-left: -0.5em;
+  }
+
+  .no-padding-top-card {
+    padding-top: 0px !important;
+  }
+
+  .content-with-place {
+    padding-top: 1em;
+  }
+}

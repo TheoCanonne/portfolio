@@ -1,8 +1,6 @@
-
 @import '../../../../../../../../libs/theme/src/lib/theme';
 
 @include nb-install-component {
-
   nb-icon {
     color: nb-theme(color-warning-300);
     font-size: 25px;
@@ -12,10 +10,11 @@
     padding: 1em 0;
   }
 
-  img{
+  img {
     max-height: 100px;
     max-width: 100px;
-    height: 80%;
+    width: auto;
+    height: auto;
   }
 
   .technology-section {
@@ -24,5 +23,4 @@
   .lightMode .technology-section {
     border-color: nb-theme(background-basic-color-1) !important;
   }
-
 }

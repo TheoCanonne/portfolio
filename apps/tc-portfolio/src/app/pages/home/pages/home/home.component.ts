@@ -11,10 +11,13 @@ export class HomeComponent {
     { imageName: 'emothep-logo.png', desc: 'Site d\'une entreprise de services informatiques.', link: 'https://e-mothep.fr/' }
   ];
 
-  technologiesList: { imagesName?: string[]; numberStars: number; }[] = [
-    { imagesName: ['angular-logo.png', 'nodejs-logo.png', 'github-logo.png'], numberStars: 3 },
-    { imagesName: ['firebase-logo.png', 'linux-logo.png', 'nginx-logo.png'], numberStars: 2 },
-    { imagesName: ['docker-logo.png', 'postgresql-logo.png', 'software-ag-logo.jpg'], numberStars: 1 }
+  technologiesList: { images?: {path: string; title: string}[]; numberStars: number; }[] = [
+    { images: [{path: 'angular-logo.png', title: 'Angular'}, {path: 'nodejs-logo.png', title: 'NodeJS'},
+    {path: 'github-logo.png', title: 'Git'}], numberStars: 3 },
+    { images: [{path: 'firebase-logo.png', title: 'Firebase'}, {path: 'linux-logo.png', title: 'Linux'},
+    {path: 'nginx-logo.png', title: 'Nginx'}], numberStars: 2 },
+    { images: [{path: 'docker-logo.png', title: 'Docker'}, {path: 'postgresql-logo.png', title: 'Postgresql - SQL'},
+    {path: 'software-ag-logo.png', title: 'Software AG'}], numberStars: 1 }
   ];
 
 }

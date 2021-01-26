@@ -14,12 +14,6 @@
   span, nb-icon{
     color: nb-theme(header-text-color);
   }
-  button:not(:hover) {
-    background-color: nb-theme(color-primary-600) !important;
-  }
-  button:hover {
-    background-color: nb-theme(color-primary-400) !important;
-  }
 }
 
 nb-icon {
@@ -28,8 +22,4 @@ nb-icon {
 
 .info-part {
   margin-bottom: 1em;
-}
-
-button {
-  width: 200px;
 }

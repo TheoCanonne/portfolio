@@ -1,0 +1,17 @@
+<nb-card [size]="size" [status]="status" [class.lightMode]="lightMode">
+  <nb-card-header [ngClass]="{'d-flex justify-content-between': date }">
+    {{title}}
+    <portfolio-date-resume *ngIf="date" [text]="date"></portfolio-date-resume>
+  </nb-card-header>
+  <nb-card-body [class.no-padding-top-card]="location">
+    <div class="resume-place" *ngIf="location">
+      <span class="d-flex align-items-center">
+        <nb-icon icon="navigation-2"></nb-icon>
+        {{location}}
+      </span>
+    </div>
+    <div class="content-part" [class.content-with-place]="location">
+      <ng-content></ng-content>
+    </div>
+  </nb-card-body>
+</nb-card>

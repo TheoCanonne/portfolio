@@ -1,0 +1,10 @@
+{
+  "required": "Ce champ est requis.",
+  "dateNotValid": "Le format de la date n'est pas correct.",
+  "outDated": "La date ne peut pas pécéder celle d'aujourd'hui.",
+  "upDated": "La date ne peut pas dépasser celle d'aujourd'hui.",
+  "phoneNumberPattern": "Le format du numéro de téléphone n'est pas correct.",
+  "email": "Le format du mail n'est pas correct.",
+  "min": "Ce champs doit être supérieur à ${min}.",
+  "minlength": "Ce champs doit contenir au minimum ${requiredLength} caractères."
+}

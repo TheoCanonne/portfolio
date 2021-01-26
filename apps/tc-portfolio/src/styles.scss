@@ -6,9 +6,17 @@
   @include nb-theme-global();
 }
 
+swiper {
+  --swiper-theme-color: var(--color-primary-400) !important;
+}
 button:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 @media (max-width: 768px) {
@@ -16,3 +24,23 @@ button:focus {
     margin-bottom: 20px;
   }
 }
+
+.primary-background {
+  background-color: nb-theme(color-primary-500);
+}
+
+swiper>.swiper.s-wrapper {
+  height: auto !important;
+  width: auto !important;
+}
+
+portfolio-main-title {
+  width: 100%;
+}
+
+
+button {
+  touch-action: manipulation;
+}
+
+

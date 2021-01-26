@@ -35,41 +35,5 @@
     margin-bottom: 3em;
   }
 
-  .primary-background {
-    background-color: nb-theme(color-primary-500);
-  }
 
-  .circle{
-    position: fixed;
-    z-index: -1;
-    width: 200px;
-    height: 200px;
-    background-color: nb-theme(color-primary-600);
-    opacity: 0.2;
-    border-radius: 100%;
-    box-shadow: nb-theme(shadow);
-  }
-
-  .circle-1 {
-    bottom: 10%;
-    right: 10%;
-  }
-  .circle-2 {
-    bottom: 50%;
-    left: 2%;
-  }
-  .circle-3 {
-    bottom: 0%;
-    left: 30%;
-  }
-
-  .background-svg {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    bottom:0;
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-  }
 }

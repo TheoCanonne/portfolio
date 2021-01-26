@@ -16,6 +16,12 @@ export class BreakpointsService {
     )
   }
 
+  getBreakpointResume() {
+    return this.breakpointObserver.observe('(max-width: 1100px)').pipe(
+      map((e) => e.matches)
+    )
+  }
+
   toggleSidebar() {
     this.sidebarState === 'expanded' ? this.sidebarState = 'collapsed': this.sidebarState = 'expanded';
   }

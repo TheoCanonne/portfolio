@@ -1,7 +1,7 @@
 @import '~@nebular/theme/styles/theming';
 @import '~@nebular/theme/styles/themes/default';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-
+$nb-enable-css-custom-properties: true;
 $nb-themes: nb-register-theme(
   (
     color-primary-100: #e5f5f7,
@@ -85,9 +85,10 @@ $nb-themes: nb-register-theme(
     button-ghost-basic-focus-border-color: button-ghost-border-color,
     header-background-color: color-primary-600,
     header-text-color: white,
-    layout-background-color: color-background-1,
+    layout-background-color: none,
     sidebar-background-color: color-primary-600,
     sidebar-text-color: white,
+    color-primary-550: #384f61
   ),
   custom,
   default
@@ -115,4 +116,17 @@ nb-menu .menu-item:not(:hover) a , nb-menu .menu-item:not(:hover) nb-icon {
 }
 nb-menu .menu-item:not(:hover) a.active, nb-menu .menu-item:not(:hover) a.active nb-icon{
   color: nb-theme(color-primary-300) !important;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: nb-theme(color-primary-400); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }

@@ -18,3 +18,19 @@ nb-layout-footer * {
 ::ng-deep nb-layout-header nav {
   box-shadow: none !important;
 }
+
+::ng-deep nb-layout-footer nav {
+  border-top: none !important;
+}
+
+.background-svg {
+  position: fixed;
+  z-index: -1;
+  top: 50px;
+  bottom: -50px;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transform-origin: top;
+  animation: animateWave 2000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
