@@ -1,0 +1,7 @@
+{
+  "service": "Gmail",
+  "auth": {
+    "user": "theo.canonne.dev@gmail.com",
+    "pass": "Theo-12079"
+  }
+}

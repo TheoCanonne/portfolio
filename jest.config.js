@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/tc-portfolio',
     '<rootDir>/libs/theme',
     '<rootDir>/libs/utils-services',
+    '<rootDir>/apps/portfolio-api',
   ],
 };
