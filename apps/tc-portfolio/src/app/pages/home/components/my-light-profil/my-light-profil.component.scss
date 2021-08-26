@@ -1,29 +1,44 @@
 @import '../../../../../../../../libs/theme/src/lib/theme';
 
 @include nb-install-component {
-  #profil-picture {
-    border-radius: 50%;
-    width: 50%;
-    min-width: 200px;
-    max-width: 300px;
-  }
-
   #my-light-profil {
     height: 100%;
-  }
+    display: flex;
+    flex-wrap: wrap;
 
-  .personnal-description-section {
-    width: 80%;
-    * {
-      color: nb-theme(header-text-color);
+    .image-container {
+      flex: 1 1 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    h1 {
-      text-align: center;
-      text-transform: uppercase;
+    .informations {
+      flex: 1 1 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    p {
-      word-break: break-word;
-      font-size: 1.1em;
+
+    #profil-picture {
+      border-radius: 50%;
+      width: 50%;
+      min-width: 200px;
+      max-width: 300px;
+    }
+
+    .personnal-description-section {
+      width: 90%;
+      * {
+        color: nb-theme(header-text-color);
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      p {
+        word-break: break-word;
+        font-size: 1.1em;
+      }
     }
   }
 }

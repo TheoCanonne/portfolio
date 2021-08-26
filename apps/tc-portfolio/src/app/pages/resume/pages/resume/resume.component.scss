@@ -7,40 +7,62 @@
   }
 
   ul {
-    margin-left: -1em;
+    margin-left: 1rem;
+
+    li {
+      margin-left: 1rem;
+    }
+  }
+
+  .translucent-card {
+    backdrop-filter: blur(5px);
+    background-color: #ffffffd0;
+    box-shadow: var(--shadow);
+    border: 1px solid nb-theme(card-border-color);
+    border-radius: 10px;
+    padding: 2rem;
   }
 }
 .whoami-part {
   min-height: 20px;
 }
 
-.card-row {
-  display: flex;
-  margin: 0 -0.5rem;
-}
-
-.card-col {
-  flex: 1 0 50%;
-  margin: 0 0.5rem;
-}
-
-.row-animation {
+.experiences {
   width: 90%;
   margin: auto;
+  display: grid;
+  grid-template:
+    'first second' 1fr
+    'first third' 1fr / 1fr 1fr;
+  gap: 1rem;
 }
 
-.skills-list {
-  margin: auto;
-  display: table;
+
+.link-button {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.info-part {
-  padding: 2em 0em 4em 0em;
-  margin-top: 2em;
+.first {
+  grid-area: first;
 }
 
-@media (max-width: 1100px) {
-  .smallScreen-margin-col {
-    margin-bottom: 1em;
+portfolio-card-resume {
+  height: 100%;
+}
+
+.skills-part {
+  display: flex;
+  margin-bottom: 3rem;
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: center;
+    flex: 1 1 100%;
   }
+
+
 }

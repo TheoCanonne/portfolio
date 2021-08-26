@@ -4,8 +4,13 @@
   nb-card {
     box-shadow: nb-theme(shadow);
     margin-bottom: 0px;
-  }
+    height: 100%;
 
+    nb-card-header.hasDate {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   nb-card.lightMode {
     border: none;
     box-shadow: 0 0.5rem 1rem 0 nb-theme(color-primary-400);
@@ -25,6 +30,8 @@
     font-weight: 500;
     padding-top: 0.5em;
     margin-left: -0.5em;
+    display: flex;
+    align-items: center;
   }
 
   .no-padding-top-card {

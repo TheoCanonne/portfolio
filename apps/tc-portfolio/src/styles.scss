@@ -1,9 +1,15 @@
-@import '~bootstrap/scss/bootstrap';
 @import '../../../libs/theme/src/lib/theme';
 @import '~@nebular/theme/styles/globals';
+@import './app/styles/button';
 
 @include nb-install() {
   @include nb-theme-global();
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 swiper {
@@ -14,22 +20,11 @@ button:focus {
   box-shadow: none !important;
 }
 
-.row {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-@media (max-width: 768px) {
-  .mobile-margin-col {
-    margin-bottom: 20px;
-  }
-}
-
 .primary-background {
   background-color: nb-theme(color-primary-500);
 }
 
-swiper>.swiper.s-wrapper {
+swiper > .swiper.s-wrapper {
   height: auto !important;
   width: auto !important;
 }
@@ -38,9 +33,6 @@ portfolio-main-title {
   width: 100%;
 }
 
-
 button {
   touch-action: manipulation;
 }
-
-

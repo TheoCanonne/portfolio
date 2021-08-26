@@ -1,0 +1,24 @@
+.btn {
+  background-color: var(--button-filled-primary-background-color);
+  border-color: var(--button-filled-primary-border-color);
+  color: var(--button-filled-primary-text-color);
+  padding: var(--button-filled-medium-padding);
+  border-style: var(--button-filled-border-style);
+  border-width: var(--button-filled-border-width);
+  text-transform: var(--button-filled-text-transform);
+  cursor: var(--button-cursor);
+  font-family: var(--button-text-font-family);
+  font-weight: var(--button-text-font-weight);
+  border-radius: var(--button-rectangle-border-radius);
+  transition-duration: 0.15s;
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-timing-function: ease-in;
+  text-decoration: unset;
+
+  &:hover {
+    background-color: var(--button-filled-primary-hover-background-color);
+    border-color: var(--button-filled-primary-hover-border-color);
+    color: var(--button-filled-primary-text-color);
+
+  }
+}

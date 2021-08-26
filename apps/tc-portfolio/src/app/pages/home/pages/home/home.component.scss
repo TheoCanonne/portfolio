@@ -35,5 +35,18 @@
     margin-bottom: 3em;
   }
 
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+
+    .project {
+      flex: 1 1 30%;
+      min-width: 200px;
+    }
+  }
+
 
 }

@@ -4,6 +4,10 @@
 
   .main-title {
     padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
   }
 
   h1 {

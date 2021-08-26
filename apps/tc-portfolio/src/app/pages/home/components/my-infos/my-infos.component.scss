@@ -5,6 +5,7 @@
   nb-card {
     margin-bottom: 0px;
     height: 100%;
+    width: 100%;
     min-height: 50px;
     background-color: nb-theme(color-primary-500);
     border: none;
@@ -14,12 +15,25 @@
   span, nb-icon{
     color: nb-theme(header-text-color);
   }
+
+  nb-icon {
+    font-size: 30px;
+  }
+
+  .info-part {
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    .info-item {
+      flex: 1 1 100%;
+      .card-info {
+        display: flex;
+        align-items:center;
+        gap: 1rem;
+      }
+
+    }
+  }
 }
 
-nb-icon {
-  font-size: 30px;
-}
-
-.info-part {
-  margin-bottom: 1em;
-}

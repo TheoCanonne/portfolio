@@ -1,8 +1,8 @@
-<div class="technology-section row" [class.lightMode]="lightMode">
-  <div class="col-md-4 col-xs-12 d-flex justify-content-center align-items-center">
+<div class="technology-section" [class.lightMode]="lightMode">
+  <div class="stars">
     <nb-icon icon="star" *ngFor="let e of arrayStars"></nb-icon>
   </div>
-  <div class="col-md-8 col-xs-12 d-flex justify-content-around align-items-center">
+  <div class="technologies">
     <img [src]="'../../../../assets/images/' + image.path" *ngFor="let image of images" [nbTooltip]="image.title" nbTooltipStatus="info">
   </div>
 </div>

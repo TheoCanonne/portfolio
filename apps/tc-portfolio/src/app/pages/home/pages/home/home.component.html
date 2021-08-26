@@ -8,12 +8,10 @@
 </svg>
 <div class="home-section">
   <portfolio-main-title title="Projet Réalisés"></portfolio-main-title>
-  <div class="row home-section-content">
-    <div class="col-md-4 offset-md-1 col-xs-12 mobile-margin-col">
-      <portfolio-projects [imageName]="projectsList[0].imageName" [desc]="projectsList[0].desc" [link]="projectsList[0].link"></portfolio-projects>
-    </div>
-    <div class="col-md-4 offset-md-2 col-xs-12 mobile-margin-col">
-      <portfolio-projects [imageName]="projectsList[1].imageName" [desc]="projectsList[1].desc" [link]="projectsList[1].link"></portfolio-projects>
+  <div class="home-section-content">
+    <div class="projects-list">
+      <portfolio-projects class="project" *ngFor="let project of projectsList" [imageName]="project.imageName" [desc]="project.desc"
+        [link]="project.link"></portfolio-projects>
     </div>
   </div>
 </div>
@@ -30,5 +28,3 @@
     <portfolio-my-infos></portfolio-my-infos>
   </div>
 </div>
-
-

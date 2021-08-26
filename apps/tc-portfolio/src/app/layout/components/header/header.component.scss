@@ -1,22 +1,30 @@
 @import '../../../../../../../libs/theme/src/lib/theme';
 
 @include nb-install-component {
-  h3 {
-    color: nb-theme(header-text-color);
-    outline: none !important;
-    cursor: pointer;
-  }
+  #header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      color: nb-theme(header-text-color);
+      font-size: 2em;
+      text-decoration: unset;
+      white-space: nowrap;
+    }
 
-  button.appearance-ghost {
-    color: nb-theme(header-text-color);
+    .link-list {
+      display: flex;
+      gap: 1rem;
+
+      .btn {
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      .active-button {
+        color: var(--button-filled-primary-hover-background-color);
+      }
+    }
   }
-  button.appearance-ghost:hover, button.appearance-ghost:focus {
-    color: nb-theme(color-primary-300);
-  }
-  button.active-button {
-    color: nb-theme(color-primary-200);
-  }
-}
-#header {
-  width: 100%;
 }
