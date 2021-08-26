@@ -37,6 +37,15 @@
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .experiences {
+    width: 100%;
+    grid-template:
+      'first'
+      'second'
+      'third';
+  }
+}
 
 .link-button {
   margin-top: 1rem;
@@ -54,15 +63,24 @@ portfolio-card-resume {
 
 .skills-part {
   display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
   margin-bottom: 3rem;
+  gap: 1rem;
 
   .skills {
     display: flex;
     flex-direction: column;
     justify-self: start;
     align-items: center;
-    flex: 1 1 100%;
+    flex: 1 1 49%;
+    min-width: 300px;
+    padding: 1rem;
+
+    .translucent-card {
+      flex-grow: 1;
+      display: grid;
+      place-items: center;
+    }
   }
-
-
 }

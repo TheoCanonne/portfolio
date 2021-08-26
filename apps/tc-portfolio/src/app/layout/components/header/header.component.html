@@ -1,19 +1,23 @@
 <div id="header">
   <a class="title" routerLink="/">Developpeur Web</a>
-  <div *ngIf="(needMenu$ | async) !== (false || null || undefined)" class="link-list">
-    <a class="btn" routerLink="/accueil" routerLinkActive="active-button">
-      Accueil
-    </a>
-    <a class="btn" routerLink="/a-propos" routerLinkActive="active-button">
-      A propos
-    </a>
-    <a class="btn" routerLink="/contact" routerLinkActive="active-button">
-      Contact
-    </a>
-  </div>
-  <div *ngIf="needMenu$ | async">
+  <div *ngIf="needMenu$ | async; else actions">
     <button nbButton ghost size="giant" (click)='breakpointsService.toggleSidebar()'>
       <nb-icon icon="menu-outline"></nb-icon>
     </button>
   </div>
+
+  <ng-template #actions>
+    <div class="link-list">
+      <a class="btn" routerLink="/accueil" routerLinkActive="active-button">
+        Accueil
+      </a>
+      <a class="btn" routerLink="/a-propos" routerLinkActive="active-button">
+        A propos
+      </a>
+      <a class="btn" routerLink="/contact" routerLinkActive="active-button">
+        Contact
+      </a>
+    </div>
+
+  </ng-template>
 </div>
